@@ -66,6 +66,9 @@ docker run --rm -it -v $(pwd):/sources paritytech/contracts-ci-linux:production 
   cargo contract build --manifest-path=/sources/my_contract/Cargo.toml
 ```
 
+*Windows users:* Instead of `$(pwd)` for current directory, use `%cd%`.
+e.g. `docker run --rm -it -v %cd%:/sources paritytech/contracts-ci-linux:production cargo contract new --target-dir /sources my_contract`
+
 If you want to reproduce other steps of CI process you can use the following
 [guide](https://github.com/paritytech/scripts#reproduce-ci-locally).
 
